@@ -16,7 +16,7 @@
 /* MODAL */
 /* CLASS */
 .modal {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--shadow-);
     position: fixed;
     top: 0;
     right: 0;
@@ -41,6 +41,7 @@
     width: 500px;
 }
 
+/* MODAL ADD CLIENT */
 .modal-header {
     padding: 7.5px 0;
     background-color: var(--primary-color);
@@ -63,17 +64,20 @@
     justify-content: flex-end;
 }
 
+/* MODAL DELETE CLIENT */
+#infoDelete {
+    margin: 20px 0 10px;
+}
 /* ID */
-/* BUTTONS */
-#btnSaveClient {
+/* BUTTONS MODAL */
+#btnSaveClient,
+#btnDeleteClient {
     background-color: var(--add-color);
-    color: var(--white-color);
     margin-right: 4px;
 }
 
 #btnSaveClient:hover {
     background-color: var(--add-color-cursor);
-    color: var(--white-color);
 }
 
 #btnCloseModal {
@@ -88,14 +92,23 @@
     cursor: pointer;
 }
 
-#btnCancel {
+#btnCancel, 
+#btnDeleteClient {
     background-color: var(--delete-color);
+}
+
+#btnCancel:hover, 
+#btnDeleteClient:hover {
+    background-color: var(--delete-color-cursor);
     color: var(--white-color);
 }
 
-#btnCancel:hover {
-    background-color: var(--delete-color-cursor);
-    color: var(--white-color);
+#btnCloseModalDelete {
+    background-color: var(--edit-color);
+}
+
+#btnCloseModalDelete:hover {
+    background-color: var(--edit-color-cursor);
 }
 
 /* MEDIA */

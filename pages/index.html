@@ -48,7 +48,7 @@
                         <td>Vila Velha</td>
                         <td>
                             <button id="btnEditarCliente">Editar</button>
-                            <button id="btnExcluirCliente">Excluir</button>
+                            <button id="btnExcluirCliente" onclick="openModalDeleteClient()">Excluir</button>
                         </td>
                     </tr>
                 </tbody>
@@ -69,8 +69,25 @@
                     <input type="text" placeholder="Cidade do Cliente" required>
                 </form>
                 <footer class="modal-footer flex">
-                    <button class="btn-save-client" id="btnSaveClient">Salvar</button>
+                    <button id="btnSaveClient">Salvar</button>
                     <button id="btnCancel" onclick="closeModalSaveClient()">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- MODAL DELETE CLIENT -->
+        <div class="modal flex" id="modalDeleteClient">
+            <div class="modal-content flex">
+                <header class="modal-header flex">
+                    <h3>Exluir Cliente</h3>
+                    <i class="fa-solid fa-xmark" id="btnCloseModal" onclick="closeModalDeleteClient()"></i>
+                </header>
+                <section id="infoDelete">
+                    <span>Deseja deletar o cliente LUIS HENRIQUE?</span>
+                </section>
+                <footer class="modal-footer flex">
+                    <button id="btnDeleteClient">Deletar</button>
+                    <button id="btnCloseModalDelete" onclick="closeModalDeleteClient()">Cancelar</button>
                 </footer>
             </div>
         </div>
