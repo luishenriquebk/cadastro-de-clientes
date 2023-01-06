@@ -1,0 +1,33 @@
+/* BUTTONS */
+#btnAdicionarCliente {
+    align-self: flex-start;
+    background-color: var(--add-color);
+}
+
+#btnAdicionarCliente:hover {
+    background-color: var(--add-color-cursor);
+}
+
+#btnFilter {
+    background-color: var(--edit-color);
+}
+
+#btnFilter:hover {
+    background-color: var(--edit-color-cursor);
+}
+
+#btnEditarCliente {
+    background-color: var(--edit-color);
+}
+
+#btnEditarCliente:hover {
+    background-color: var(--edit-color-cursor)
+}
+
+#btnExcluirCliente {
+    background-color: var(--delete-color);
+}
+
+#btnExcluirCliente:hover {
+    background-color: var(--delete-color-cursor);
+}

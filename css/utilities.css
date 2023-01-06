@@ -1,0 +1,16 @@
+/* UTILITIES */
+
+.container {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
