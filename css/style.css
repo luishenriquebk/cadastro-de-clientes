@@ -1,3 +1,6 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;700&display=swap');
+
 /* ROOT */
 :root {
     --primary-color: #3f51b5;
@@ -14,14 +17,10 @@
 
 /* TAGS */
 thead tr th {
-    padding: 10px;
+    padding: 5px;
     background-color: var(--primary-color);
     border: 1px solid rgb(174, 174, 174);
     color: var(--white-color);
-}
-
-tbody {
-    border-collapse: collapse;
 }
 
 tbody tr td {
@@ -30,7 +29,6 @@ tbody tr td {
     padding: 5px;
     font-weight: 500;
 }
-
 
 /* CLASS */
 .tablet {
@@ -42,7 +40,6 @@ tbody tr td {
 .row-filter {
     position: relative;
     justify-content: space-between;
-    width: 100%;
 }
 
 .row-filter i {
@@ -50,11 +47,6 @@ tbody tr td {
     position: absolute;
     top: 8px;
     right: 100px;
-}
-
-.row-filter input {
-    border: 1px solid var(--gray-color);
-    padding: 6px;
 }
 
 .cadastro-clientes {

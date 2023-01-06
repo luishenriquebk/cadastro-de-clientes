@@ -42,7 +42,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Luis Henrique</td>
+                        <td>Luis Henrique Botelho Kamma</td>
                         <td>131.598.217-06</td>
                         <td>(27) 99312-6594</td>
                         <td>Vila Velha</td>
@@ -55,26 +55,23 @@
             </table>
         </div> 
 
-        
+        <!-- MODAL SAVE/EDIT CLIENT -->
         <div class="modal flex" id="modalSaveClient">
-            <div class="modal-save-content flex">
-                <div class="modal-header flex">
+            <div class="modal-content flex">
+                <header class="modal-header flex">
                     <h3>Novo Cliente</h3>
-                    <span id="btnCloseModal">X</span>
-                    <i class="fa-solid fa-xmark" id="btnCloseModal"></i>
-                </div>
-                <div class="modal-inputs flex">
-                    <input type="text" placeholder="Nome do Cliente">
-                    <input type="text" placeholder="CPF do Cliente">
-                </div>
-                <div class="modal-inputs flex">
-                    <input type="text" placeholder="Telefone do Cliente">
-                    <input type="text" placeholder="Cidade do Telefone">
-                </div>
-                <div class="modal-btns flex">
+                    <i class="fa-solid fa-xmark" id="btnCloseModal" onclick="closeModalSaveClient()"></i>
+                </header>
+                <form class="modal-form grid" id="modalForm">
+                    <input type="text" placeholder="Nome do Cliente" required>
+                    <input type="text" placeholder="CPF do Cliente" required>
+                    <input type="text" placeholder="Telefone do Cliente" required>
+                    <input type="text" placeholder="Cidade do Cliente" required>
+                </form>
+                <footer class="modal-footer flex">
                     <button class="btn-save-client" id="btnSaveClient">Salvar</button>
-                    <button class="btn-cancel-client" id="btnCancel">Cancelar</button>
-                </div>
+                    <button id="btnCancel" onclick="closeModalSaveClient()">Cancelar</button>
+                </footer>
             </div>
         </div>
 

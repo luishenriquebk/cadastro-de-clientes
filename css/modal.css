@@ -1,6 +1,7 @@
 /* ROOT */
 :root {
     --primary-color: #3f51b5;
+    --black-color: black;
     --gray-color: rgb(160, 160, 160);
     --add-color: rgb(8, 192, 8);
     --add-color-cursor: rgb(7, 152, 7);
@@ -21,8 +22,8 @@
     right: 0;
     left: 0;
     bottom: 0;
-    opacity: 1;
-    z-index: 1;
+    opacity: 0;
+    z-index: -1;
 }
 
 .active {
@@ -30,7 +31,7 @@
     z-index: 1;
 }
 
-.modal-save-content {
+.modal-content {
     background-color: var(--white-color);
     box-shadow: 5px 10px 10px var(--shadow-);
     border-radius: 8px;
@@ -46,24 +47,19 @@
     border-radius: 8px 8px 0 0;
     color: var(--white-color);
     overflow: visible;
-    width: 100%;
 }
 
-.modal-inputs {
-    justify-content: space-between;
-    padding: 10px;
-    width: 100%;
+.modal-form {
+    gap: 10px;
+    margin: 20px 0 10px;
 }
 
-.modal-inputs input {
-    padding: 7px;
+.modal-form input {
     width: 225px;
-    border: 1px solid var(--gray-color);
 }
 
-.modal-btns {
+.modal-footer {
     padding: 10px;
-    width: 100%;
     justify-content: flex-end;
 }
 
@@ -80,16 +76,6 @@
     color: var(--white-color);
 }
 
-#btnCancel {
-    background-color: var(--delete-color);
-    color: var(--white-color);
-}
-
-#btnCancel:hover {
-    background-color: var(--delete-color-cursor);
-    color: var(--white-color);
-}
-
 #btnCloseModal {
     border-radius: 8px 8px 0 8px;
     padding: 11px 15px;
@@ -100,5 +86,27 @@
 #btnCloseModal:hover {
     background-color: var(--delete-color);
     cursor: pointer;
+}
+
+#btnCancel {
+    background-color: var(--delete-color);
+    color: var(--white-color);
+}
+
+#btnCancel:hover {
+    background-color: var(--delete-color-cursor);
+    color: var(--white-color);
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 560px) {
+    .modal-content {
+        width: 300px;
+    }
+
+    .modal-form {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 

@@ -9,6 +9,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .text-center {
