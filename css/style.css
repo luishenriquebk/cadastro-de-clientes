@@ -30,11 +30,18 @@ tbody tr td {
     font-weight: 500;
 }
 
+tbody tr td {
+    padding: 2px;
+}
+
+tbody tr td button {
+    margin: 2px 0;
+}
+
 /* CLASS */
 .tablet {
-    height: 100vh;
-    padding: 0 30px;
-    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+    padding: 15px;
+    /* background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%); */
 }
 
 .row-filter {
@@ -69,6 +76,17 @@ tbody tr td {
     border-collapse: collapse;
     margin: 20px 0;
     width: 100%;
+}
+
+/* MEDIA SCREEN */
+@media screen and (max-width: 600px) {
+    tbody tr td {
+        padding: 0 5px;
+    }
+
+    tbody tr td button {
+        margin: 2px 0;
+    }
 }
 
 
