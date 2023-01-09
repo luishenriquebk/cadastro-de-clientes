@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Pessoas - CRUD</title>
+    <title>Cadastro de Clientes - CRUD</title>
     <!-- FAVICON -->
-    <link type="image/png" sizes="16x16" rel="icon" href="../img/icons8-javascript-32.png">
+    <link type="image/png" sizes="16x16" rel="icon" href="../img/favicon.png">
     <!-- LINKS CSS -->
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/utilities.css">
@@ -21,7 +21,6 @@
 
         <div class="cadastro-clientes container flex">
             
-            <!-- <button id="btnAdicionarCliente">Novo Cliente</button> -->
             <div class="row-filter flex">
                 <button id="btnAdicionarCliente" onclick="openModalSaveClient()">Novo Cliente</button>
                 <div class="filter">
@@ -40,17 +39,17 @@
                         <th>Ação</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>LUIS HENRIQUE</td>
-                        <td>131.598.217-06</td>
-                        <td>(27) 99312-6594</td>
-                        <td>VILA VELHA</td>
+                <tbody id="tbodyClientes">
+                    <!-- <tr>
+                        <td id="nomeCliente">LUIS HENRIQUE</td>
+                        <td id="cpfCliente">131.598.217-06</td>
+                        <td id="telefoneCliente">(27) 99312-6594</td>
+                        <td id="cidadeCliente">VILA VELHA</td>
                         <td>
-                            <button id="btnEditarCliente">Editar</button>
+                            <button id="btnEditarCliente" onclick="openModalSaveClient()">Editar</button>
                             <button id="btnExcluirCliente" onclick="openModalDeleteClient()">Excluir</button>
                         </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div> 
@@ -59,17 +58,17 @@
         <div class="modal flex" id="modalSaveClient">
             <div class="modal-content flex">
                 <header class="modal-header flex">
-                    <h3>Novo Cliente</h3>
+                    <h3 id="titleModalSaveEdit">Novo Cliente</h3>
                     <i class="fa-solid fa-xmark" id="btnCloseModal" onclick="closeModalSaveClient()"></i>
                 </header>
                 <form class="modal-form grid" id="modalForm">
-                    <input type="text" placeholder="Nome do Cliente" required>
-                    <input type="text" placeholder="CPF do Cliente" required>
-                    <input type="text" placeholder="Telefone do Cliente" required>
-                    <input type="text" placeholder="Cidade do Cliente" required>
+                    <input type="text" id="inputNomeCliente" placeholder="Nome do Cliente" required>
+                    <input type="text" id="inputCpfCliente" placeholder="CPF do Cliente" required>
+                    <input type="text" id="inputTelefoneCliente" placeholder="Telefone do Cliente" required>
+                    <input type="text" id="inputCidadeCliente" placeholder="Cidade do Cliente" required>
                 </form>
                 <footer class="modal-footer flex">
-                    <button id="btnSaveClient">Salvar</button>
+                    <button id="btnSaveClient" onclick="salvarCliente()">Salvar</button>
                     <button id="btnCancel" onclick="closeModalSaveClient()">Cancelar</button>
                 </footer>
             </div>
