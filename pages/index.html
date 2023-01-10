@@ -62,10 +62,18 @@
                     <i class="fa-solid fa-xmark" id="btnCloseModal" onclick="closeModalSaveClient()"></i>
                 </header>
                 <form class="modal-form grid" id="modalForm">
-                    <input type="text" id="inputNomeCliente" placeholder="Nome do Cliente" required>
-                    <input type="text" id="inputCpfCliente" placeholder="CPF do Cliente" required>
-                    <input type="text" id="inputTelefoneCliente" placeholder="Telefone do Cliente" required>
-                    <input type="text" id="inputCidadeCliente" placeholder="Cidade do Cliente" required>
+                    <input type="text" class="modal-field" id="inputNomeCliente" 
+                    placeholder="Nome do Cliente"
+                    required>
+                    <input type="text" class="modal-field" id="inputCpfCliente" 
+                    placeholder="CPF do Cliente" onkeyup="caracteresCpf()"
+                    maxlength="14"  required>
+                    <input type="text" class="modal-field" id="inputTelefoneCliente" 
+                    placeholder="Telefone do Cliente" onkeyup="caracteresTelefone()"
+                    maxlength="13" required>
+                    <input type="text" class="modal-field" id="inputCidadeCliente" 
+                    placeholder="Cidade do Cliente" 
+                    required>
                 </form>
                 <footer class="modal-footer flex">
                     <button id="btnSaveClient" onclick="salvarCliente()">Salvar</button>
@@ -75,7 +83,7 @@
         </div>
 
         <!-- MODAL DELETE CLIENT -->
-        <div class="modal flex" id="modalDeleteClient">
+        <!-- <div class="modal flex" id="modalDeleteClient">
             <div class="modal-content flex">
                 <header class="modal-header flex">
                     <h3>Exluir Cliente</h3>
@@ -85,11 +93,11 @@
                     <span>Deseja deletar o cliente LUIS HENRIQUE?</span>
                 </section>
                 <footer class="modal-footer flex">
-                    <button id="btnDeleteClient">Deletar</button>
+                    <button id="btnDeleteClient" onclick="deletarCliente()">Deletar</button>
                     <button id="btnCloseModalDelete" onclick="closeModalDeleteClient()">Cancelar</button>
                 </footer>
             </div>
-        </div>
+        </div> -->
 
     </main>
 </body>
